@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import Navbar from "@/components/ui/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +27,9 @@ export default function RootLayout({
   return (
    <html lang="en">
       <body>
-        <div className="flex justify-end p-4">
-          <ThemeToggle />
+        <div className="">
+          <Navbar/>
+          {/* <ThemeToggle /> */}
         </div>
         {children}
       </body>
