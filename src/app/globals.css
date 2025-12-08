@@ -10,6 +10,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary: #FF5252;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --container-8xl: 96rem;

@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import Navbar from "@/components/ui/Navbar";
+import Container from "@/components/ui/Container";
+import Footer from "@/components/ui/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-   <html lang="en">
+    <html lang="en">
       <body>
         <div className="">
-          <Navbar/>
+          <Navbar />
           {/* <ThemeToggle /> */}
         </div>
-        {children}
+        <Container>{children}</Container>
+        <Footer />
       </body>
     </html>
   );
