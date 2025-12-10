@@ -10,7 +10,7 @@ import { Heart, ShoppingCart, TextAlignStartIcon, Rocket } from "lucide-react";
 export default function Navbar() {
   return (
     <nav className="grid shadow-md">
-      <div className="p-5 flex justify-between items-center border-b border-gray-200">
+      <div className="p-2 flex justify-between items-center border-b border-gray-200">
         <div>Get up to 50% off new season styles,limited time only</div>
         <div className="flex gap-4">
           <Link href="/" className="">
@@ -22,7 +22,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className="div ">
-        <div className="p-5 flex justify-between items-center border-b border-gray-200">
+        <div className="p-4 flex justify-between items-center border-b border-gray-200">
           <div>
             <Logo />
           </div>
@@ -46,7 +46,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between p-5">
+        <div className="flex justify-between p-4">
           <div className="flex items-center ">
             <TextAlignStartIcon /> SHOP BY GATEGORIES
           </div>
