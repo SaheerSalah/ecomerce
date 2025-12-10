@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 import Navbar from "@/components/ui/Navbar";
 import Container from "@/components/ui/Container";
 import Footer from "@/components/ui/Footer";
@@ -29,12 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="">
+        <ThemeProvider>
           <Navbar />
-          {/* <ThemeToggle /> */}
-        </div>
-        <Container>{children}</Container>
-        <Footer />
+          <Container>{children}</Container>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

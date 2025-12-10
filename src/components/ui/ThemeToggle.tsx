@@ -1,50 +1,17 @@
-"use client"
-import { useState, useEffect } from 'react';
+"use client";
 
-const ThemeToggle = () => {
-  const [theme, setTheme] = useState('light');
+import { useTheme } from "@/hooks/useTheme";
+import { Sun, Moon } from "lucide-react";
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else if (prefersDark.matches) {
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', newTheme);
-  };
+export default function ThemeToggle() {
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button
       onClick={toggleTheme}
-      className="
-        p-3 rounded-lg 
-        bg-gray-100 dark:bg-gray-800 
-        hover:bg-gray-200 dark:hover:bg-gray-700
-        transition-colors duration-200
-        shadow-lg hover:shadow-xl
-      "
-      aria-label={`تبديل الوضع إلى ${theme === 'light' ? 'داكن' : 'فاتح'}`}
+      className=" rounded-full dark:border-gray-600"
     >
-      {theme === 'light' ? (
-        <span className="text-2xl">🌙</span>
-      ) : (
-        <span className="text-2xl">☀️</span>
-      )}
+      {theme === "light" ? <Sun size={20} /> : <Moon size={20} />}
     </button>
   );
-};
-
-export default ThemeToggle;
-
-
+}
