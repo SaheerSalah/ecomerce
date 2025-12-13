@@ -28,3 +28,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  background-color: white; /* الخلفية */
+  color: #1f2937; /* لون السهم (رمادي غامق) */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+}
+.dark .hero-swiper .swiper-button-next,
+.dark .hero-swiper .swiper-button-prev {
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+}
+
