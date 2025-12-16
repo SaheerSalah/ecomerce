@@ -28,7 +28,7 @@ export default function Container({
   const gapClass = gap ? `gap-${gap}` : "";
 
   return (
-    <div className={`mx-auto max-w-7xl ${px} ${py} ${displayClass} ${gapClass} ${className}`}>
+    <div className={` mx-auto max-w-7xl ${px} ${py} ${displayClass} ${gapClass} ${className}`}>
       {children}
     </div>
   );

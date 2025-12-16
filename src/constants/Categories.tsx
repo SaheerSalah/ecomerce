@@ -1,4 +1,4 @@
-export const Gategories = [
+export const Categories = [
     {
         id: 1,
         title: "Fashion",

@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Gategories } from "@/constants/Gategories";
+import { Categories } from "@/constants/Categories";
 export default function Hero() {
   return (
     <section className="bg-gray-200 p-5 ">
@@ -58,7 +58,7 @@ export default function Hero() {
           disableOnInteraction: false, // لو المستخدم سحب الكروت، الاستمرار بالتحريك
         }}
       >
-        {Gategories.map((item) => (
+        {Categories.map((item) => (
           <SwiperSlide key={item.id}>
             <article className="w-full min-h-[150px] bg-white p-5 cursor-pointer border border-gray-300">
               <div className="flex justify-center">
